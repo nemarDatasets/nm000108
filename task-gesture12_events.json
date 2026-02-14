@@ -1,0 +1,49 @@
+{
+  "onset": {
+    "Description": "Onset time of the event in seconds from recording start",
+    "Units": "s"
+  },
+  "duration": {
+    "Description": "Duration of the event in seconds",
+    "Units": "s"
+  },
+  "sample": {
+    "Description": "Sample index of the event onset (at 2048 Hz sampling rate)",
+    "Units": "samples"
+  },
+  "value": {
+    "Description": "Event type identifier",
+    "Levels": {
+      "dynamic_trial1_task1": "Dynamic movement task 1, trial 1",
+      "dynamic_trial1_task2": "Dynamic movement task 2, trial 1",
+      "dynamic_trial1_task3": "Dynamic movement task 3, trial 1",
+      "dynamic_trial2_task1": "Dynamic movement task 1, trial 2",
+      "dynamic_trial2_task2": "Dynamic movement task 2, trial 2",
+      "dynamic_trial2_task3": "Dynamic movement task 3, trial 2",
+      "maintenance_trial1": "Maintenance hold, trial 1",
+      "maintenance_trial2": "Maintenance hold, trial 2"
+    }
+  },
+  "trial_type": {
+    "Description": "Categorical event classification matching the value column"
+  },
+  "trial": {
+    "Description": "Trial number (1 or 2)"
+  },
+  "task_type": {
+    "Description": "Task phase type within a trial",
+    "Levels": {
+      "dynamic": "Dynamic movement from rest to gesture position (1s duration)",
+      "maintenance": "Static hold of gesture position (4s duration)"
+    }
+  },
+  "task_index": {
+    "Description": "Task index within the trial: 1-3 for dynamic tasks, 1 for maintenance"
+  },
+  "gesture_id": {
+    "Description": "Gesture number (1-34) as defined in Table I of Jiang et al. 2021"
+  },
+  "gesture_name": {
+    "Description": "Human-readable gesture name from Table I of Jiang et al. 2021"
+  }
+}

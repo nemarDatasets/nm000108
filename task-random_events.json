@@ -1,0 +1,20 @@
+{
+  "onset": {
+    "Description": "Onset time of the event in seconds from recording start",
+    "Units": "s"
+  },
+  "duration": {
+    "Description": "Duration of the event in seconds. 'n/a' for instantaneous events.",
+    "Units": "s"
+  },
+  "sample": {
+    "Description": "Sample index of the event onset (at 2048 Hz sampling rate)",
+    "Units": "samples"
+  },
+  "value": {
+    "Description": "Event type identifier",
+    "Levels": {
+      "boundary": "Junction point between merged original recording files"
+    }
+  }
+}

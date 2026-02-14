@@ -1,0 +1,8 @@
+onset	duration	sample	value	trial_type	trial	task_type	task_index	gesture_id	gesture_name
+0	1	0	dynamic_trial1_task1	dynamic_trial1_task1	1	dynamic	1	24	wrist_pronation_hand_open
+1	1	2048	dynamic_trial1_task2	dynamic_trial1_task2	1	dynamic	2	24	wrist_pronation_hand_open
+2	1	4096	dynamic_trial1_task3	dynamic_trial1_task3	1	dynamic	3	24	wrist_pronation_hand_open
+3	1	6144	dynamic_trial2_task1	dynamic_trial2_task1	2	dynamic	1	24	wrist_pronation_hand_open
+4	1	8192	dynamic_trial2_task2	dynamic_trial2_task2	2	dynamic	2	24	wrist_pronation_hand_open
+5	1	10240	dynamic_trial2_task3	dynamic_trial2_task3	2	dynamic	3	24	wrist_pronation_hand_open
+6	4	12288	maintenance_trial1	maintenance_trial1	1	maintenance	1	24	wrist_pronation_hand_open

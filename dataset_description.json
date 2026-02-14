@@ -1,0 +1,38 @@
+{
+  "Name": "HySER: High-Density Surface Electromyogram Recordings",
+  "BIDSVersion": "1.11.0",
+  "DatasetType": "raw",
+  "License": "ODC-By-1.0",
+  "Authors": [
+    "Xinyu Jiang",
+    "Chenyun Dai",
+    "Xiangyu Liu",
+    "Jiahao Fan"
+  ],
+  "ReferencesAndLinks": [
+    "https://doi.org/10.1109/TNSRE.2021.3082551",
+    "https://physionet.org/content/hd-semg/1.0.0/"
+  ],
+  "DatasetDOI": "doi:10.13026/ym7v-bh53",
+  "Funding": [
+    "Shanghai Municipal Science and Technology Major Project (2017SHZDZX01)",
+    "Shanghai Pujiang Program (19PJ1401100)",
+    "Natural Science Foundation of Shanghai (20ZR1403400)"
+  ],
+  "EthicsApprovals": [
+    "Fudan University Ethics Committee (BE2035)"
+  ],
+  "SourceDatasets": [
+    {
+      "URL": "https://physionet.org/content/hd-semg/1.0.0/",
+      "DOI": "doi:10.13026/ym7v-bh53",
+      "Version": "1.0.0"
+    }
+  ],
+  "GeneratedBy": [
+    {
+      "Name": "EMG-2-BIDS",
+      "Description": "MATLAB-based EMG to BIDS converter using EEGLAB and bids-matlab-tools"
+    }
+  ]
+}

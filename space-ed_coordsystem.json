@@ -1,0 +1,12 @@
+{
+  "EMGCoordinateSystem": "Other",
+  "EMGCoordinateUnits": "mm",
+  "EMGCoordinateSystemDescription": "Local coordinate system for the Extensor Distal (ED) 8x8 electrode grid. Origin at electrode E1. x-axis: across columns (0-70mm). y-axis: across rows (0-70mm). z-axis: 0 (planar grid). Inter-electrode distance: 10mm.",
+  "ParentCoordinateSystem": "forearm",
+  "AnchorElectrode": "E1",
+  "AnchorCoordinates": [
+    50,
+    75,
+    0
+  ]
+}

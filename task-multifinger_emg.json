@@ -1,0 +1,35 @@
+{
+  "SamplingFrequency": 2048,
+  "PowerLineFrequency": 50,
+  "EMGChannelCount": 256,
+  "EMGReference": "olecranon (elbow)",
+  "EMGGround": "head of ulna (right leg drive circuit)",
+  "EMGPlacementScheme": "Other",
+  "EMGPlacementSchemeDescription": "Four 8x8 high-density electrode arrays (64 channels each, 256 total) placed on the right forearm. Two arrays on extensor muscles (Extensor Distal near wrist, Extensor Proximal near elbow) and two on flexor muscles (Flexor Distal near wrist, Flexor Proximal near elbow). On each forearm side, two 8x8 arrays construct a 16x8 electrode array aligned with the forearm long axis. The center of the 16x8 array is aligned with the center of the forearm area bounded by the radial styloid, ulnar styloid, humeroulnar joint, and head of ulna. Inter-electrode distance: 10mm center-to-center. Electrodes are gelled elliptical (5mm x 2.8mm).",
+  "RecordingType": "continuous",
+  "Manufacturer": "OT Bioelettronica",
+  "ManufacturersModelName": "Quattrocento",
+  "ElectrodeManufacturer": "OT Bioelettronica",
+  "ElectrodeManufacturersModelName": "ELSCH064NM3",
+  "InterelectrodeDistance": 10,
+  "Gain": 150,
+  "SkinPreparation": "Forearm cleaned with abrasive gel and wiped with alcohol pad",
+  "HardwareFilters": {
+    "HighpassFilter": {
+      "CutoffFrequency": 10,
+      "Order": 2
+    },
+    "LowpassFilter": {
+      "CutoffFrequency": 500,
+      "TransitionBandwidth": 25,
+      "StopbandAttenuation": 100
+    }
+  },
+  "SoftwareFilters": "n/a",
+  "InstitutionName": "Fudan University",
+  "InstitutionalDepartmentName": "Center for Intelligent Medical Electronics, School of Information Science and Technology",
+  "InstitutionAddress": "Shanghai 200433, China",
+  "TaskName": "multifinger",
+  "TaskDescription": "Multi-finger isometric contraction (N-DOF). Subjects tracked up to 5 target force trajectories simultaneously for prescribed combinations of multiple fingers. 15 different finger combinations, 2 trials of 25s each.",
+  "Instructions": "Track the target force trajectories shown on screen using the indicated finger combination."
+}

@@ -1,0 +1,34 @@
+{
+  "SamplingFrequency": 2048,
+  "StartTime": 0,
+  "Columns": [
+    "thumb",
+    "index",
+    "middle",
+    "ring",
+    "little"
+  ],
+  "Units": "N",
+  "PhysioType": "generic",
+  "TaskName": "multifinger",
+  "thumb": {
+    "Description": "Isometric force measured at the thumb",
+    "Units": "N"
+  },
+  "index": {
+    "Description": "Isometric force measured at the index finger",
+    "Units": "N"
+  },
+  "middle": {
+    "Description": "Isometric force measured at the middle finger",
+    "Units": "N"
+  },
+  "ring": {
+    "Description": "Isometric force measured at the ring finger",
+    "Units": "N"
+  },
+  "little": {
+    "Description": "Isometric force measured at the little finger",
+    "Units": "N"
+  }
+}
