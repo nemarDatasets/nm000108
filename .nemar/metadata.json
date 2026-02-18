@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "HySER: High-Density Surface Electromyogram Recordings",
-  "description": "HySER is a high-density surface electromyography (HD-sEMG) dataset comprising 256-channel recordings from 20 right-handed subjects performing hand gesture recognition and force control tasks across two sessions. The dataset includes simultaneous 5-finger force measurements and covers five task types: 34 discrete hand gestures, maximum voluntary contractions, single-finger and multi-finger force tracking, and random contractions. This resource supports research in motor control, gesture recognition, and electromyographic signal processing.",
-  "methods_description": "HD-sEMG data were acquired using a Quattrocento system (OT Bioelettronica) at 2048 Hz sampling rate with 256 channels arranged in four 8×8 electrode arrays (5 mm × 2.8 mm elliptical, 10 mm inter-electrode spacing) placed on the right forearm extensors and flexors. Hardware filtering included 10 Hz high-pass (2nd order) and 500 Hz low-pass. Five-finger force data were recorded simultaneously at 100 Hz using force sensors. Subjects performed tasks across two sessions separated by 3-25 days.",
+  "description": "HySER is a high-density surface electromyography (HD-sEMG) dataset comprising 256-channel recordings from 20 right-handed subjects performing five task types across two sessions. The dataset includes simultaneous 5-finger force recordings and covers discrete hand gesture recognition, maximum voluntary contractions, single-finger and multi-finger force tracking, and random contractions. This resource enables investigation of motor control, gesture recognition algorithms, and hand function assessment using advanced electrode array technology.",
+  "methods_description": "HD-sEMG data were acquired using a Quattrocento system (OT Bioelettronica) at 2048 Hz sampling rate with 16-bit resolution and gain of 150. Four 8×8 gelled elliptical electrode arrays (5 mm × 2.8 mm spacing, 10 mm inter-electrode distance) were placed on the right forearm extensors and flexors (distal and proximal positions). Hardware filtering included 10 Hz high-pass (2nd order) and 500 Hz low-pass. Five-finger force data were recorded simultaneously at 100 Hz using force sensors. Reference electrode was placed at the olecranon with ground at the head of the ulna.",
   "license": "ODC-By-1.0",
   "dataset_type": "raw",
   "authors": {
@@ -49,10 +49,10 @@
       "term": "force tracking"
     },
     {
-      "term": "signal processing"
+      "term": "high-density surface EMG"
     },
     {
-      "term": "high-density surface EMG"
+      "term": "forearm muscles"
     }
   ],
   "related_identifiers": [
