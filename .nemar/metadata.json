@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "authors": {
+    "Xinyu Jiang": {
+      "orcid": "0000-0002-8518-1415",
+      "affiliations": [
+        {
+          "name": "Center for Intelligent Medical Electronics, School of Information Science and Technology, Fudan University, Shanghai 200433, China"
+        }
+      ]
+    },
+    "Chenyun Dai": {
+      "orcid": "0000-0002-3056-4339",
+      "affiliations": [
+        {
+          "name": "Center for Intelligent Medical Electronics, School of Information Science and Technology, Fudan University, Shanghai 200433, China"
+        }
+      ]
+    },
+    "Jiahao Fan": {
+      "orcid": "0000-0003-0514-1323",
+      "affiliations": [
+        {
+          "name": "Center for Intelligent Medical Electronics, School of Information Science and Technology, Fudan University, Shanghai 200433, China"
+        }
+      ]
+    }
+  },
+  "description": "HySER is a high-density surface electromyography (HD-sEMG) dataset comprising 256-channel recordings from 20 right-handed subjects performing five task types across two sessions. The dataset includes simultaneous 5-finger force measurements and covers discrete hand gesture recognition, maximum voluntary contractions, single-finger and multi-finger force tracking, and random contractions. This resource supports research in motor control, hand gesture recognition, and electromyographic signal processing.",
+  "methods_description": "EMG data were acquired using a Quattrocento system (OT Bioelettronica) at 2048 Hz sampling rate with 16-bit resolution and gain of 150. Four 8×8 gelled elliptical electrode arrays (5 mm × 2.8 mm spacing, 10 mm inter-electrode distance) were placed on the right forearm extensors and flexors (distal and proximal positions). Reference electrode was placed at the olecranon with ground at the head of the ulna. Hardware filtering included 10 Hz high-pass (2nd order) and 500 Hz low-pass. Simultaneous 5-finger force data were recorded at 100 Hz using SAS and HSGA force sensors.",
+  "keywords": [
+    {
+      "term": "electromyography",
+      "subject_scheme": "MeSH"
+    },
+    {
+      "term": "hand gestures",
+      "subject_scheme": "MeSH"
+    },
+    {
+      "term": "motor control",
+      "subject_scheme": "MeSH"
+    },
+    {
+      "term": "force tracking"
+    },
+    {
+      "term": "high-density surface EMG"
+    },
+    {
+      "term": "forearm muscles"
+    }
+  ],
+  "funding_references": [
+    {
+      "funder_name": "Shanghai Municipal Science and Technology Commission",
+      "award_number": "2017SHZDZX01",
+      "award_title": "Shanghai Municipal Science and Technology Major Project"
+    },
+    {
+      "funder_name": "Shanghai Pujiang Program",
+      "award_number": "19PJ1401100"
+    },
+    {
+      "funder_name": "Natural Science Foundation of Shanghai",
+      "award_number": "20ZR1403400"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1109/TNSRE.2021.3082551",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.13026/ym7v-bh53",
+      "identifier_type": "DOI",
+      "relation_type": "IsVersionOf"
+    }
+  ]
+}
