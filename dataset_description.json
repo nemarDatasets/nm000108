@@ -34,5 +34,6 @@
       "Name": "EMG-2-BIDS",
       "Description": "MATLAB-based EMG to BIDS converter using EEGLAB and bids-matlab-tools"
     }
-  ]
+  ],
+  "Version": "1.0.0"
 }
