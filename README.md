@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.nm000108-blue)](https://doi.org/10.82901/nemar.nm000108)
+
 [![Paper DOI](https://img.shields.io/badge/Paper-10.1109/TNSRE.2021.3082551-blue)](https://doi.org/10.1109/TNSRE.2021.3082551)
 [![PhysioNet](https://img.shields.io/badge/PhysioNet-hd--semg%2F1.0.0-green)](https://physionet.org/content/hd-semg/1.0.0/)
 [![License](https://img.shields.io/badge/License-ODC--By--1.0-lightgrey)](https://opendatacommons.org/licenses/by/1-0/)
