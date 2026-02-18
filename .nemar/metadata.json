@@ -1,8 +1,8 @@
 {
   "version": "2.0",
   "pipeline_stage": "enriched",
-  "description": "HySER is a high-density surface electromyography (HD-sEMG) dataset comprising 256-channel recordings from 20 right-handed subjects performing five task types across two sessions. The dataset includes simultaneous 5-finger force measurements and covers discrete hand gesture recognition, maximum voluntary contractions, single-finger and multi-finger force tracking, and random contractions. This resource supports research in motor control, gesture recognition, and myoelectric signal processing.",
-  "methods_description": "EMG data were acquired using a Quattrocento system (OT Bioelettronica) at 2048 Hz sampling rate with 16-bit resolution and gain of 150. Four 8×8 gelled elliptical electrode arrays (5 mm × 2.8 mm spacing, 10 mm inter-electrode distance) were placed on the right forearm: two arrays on extensors (distal and proximal) and two on flexors (distal and proximal). Reference electrode was placed at the olecranon with ground at the head of the ulna. Hardware filtering included 10 Hz high-pass (2nd order) and 500 Hz low-pass. Simultaneous 5-finger force data were recorded at 100 Hz using SAS and HSGA force sensors.",
+  "description": "HySER is a high-density surface electromyography (HD-sEMG) dataset comprising 256-channel recordings from 20 right-handed subjects performing hand gesture recognition and force control tasks across two sessions. The dataset includes simultaneous 5-finger force measurements and covers 34 discrete hand gestures, maximum voluntary contractions, single-finger and multi-finger force tracking, and random contractions. This resource supports research in motor control, gesture recognition, and electromyographic signal processing.",
+  "methods_description": "HD-sEMG signals were recorded using a Quattrocento system (OT Bioelettronica) at 2048 Hz with 16-bit resolution from four 8×8 electrode arrays (256 channels total) placed on the flexor and extensor compartments of the right forearm. Electrodes were spaced 10 mm apart. Five-finger force data were acquired simultaneously at 100 Hz using force sensors. Subjects performed five task types: 34 discrete hand gestures (2 trials each with dynamic and maintenance phases), maximum voluntary contractions (2 per finger), single-finger force tracking (3 per finger), multi-finger force tracking (2 per combination), and random contractions (5 trials). Two sessions per subject were separated by 3-25 days.",
   "authors": {
     "Xinyu Jiang": {
       "orcid": "0000-0002-8518-1415",
@@ -44,13 +44,20 @@
       "subject_scheme": "MeSH"
     },
     {
-      "term": "force tracking"
+      "term": "force measurement",
+      "subject_scheme": "MeSH"
     },
     {
-      "term": "high-density surface EMG"
+      "term": "signal processing",
+      "subject_scheme": "LCSH"
     },
     {
-      "term": "forearm muscles"
+      "term": "high-density surface EMG",
+      "subject_scheme": "LCSH"
+    },
+    {
+      "term": "forearm musculature",
+      "subject_scheme": "MeSH"
     }
   ],
   "related_identifiers": [
@@ -90,5 +97,12 @@
       "award_number": "20ZR1403400"
     }
   ],
-  "resource_type_general": "Dataset"
+  "resource_type_general": "Dataset",
+  "title": "HySER: High-Density Surface Electromyogram Recordings",
+  "license": "ODC-By-1.0",
+  "dataset_type": "raw",
+  "modalities": [
+    "emg"
+  ],
+  "resource_type_specific": "EMG Dataset"
 }
