@@ -166,36 +166,37 @@ jobs:
             var regular = 0;
             var skipped = 0;
 
+            var uploadDone = upload.done().catch(function (err) {
+              console.error("S3 Upload error:", err.message);
+              process.exitCode = 1;
+            });
+
             for (var i = 0; i < files.length; i++) {
               var rel = files[i].rel;
               var full = files[i].full;
               var annexKey = resolveAnnexKey(full);
 
-              if (i === 0) console.log("Processing first file: " + rel + " annexed=" + !!annexKey);
-
-              if (annexKey) {
-                var url = S3_BASE + "/" + DATASET_ID + "/objects/" + encodeURIComponent(annexKey);
-                try {
+              try {
+                if (annexKey) {
+                  var url = S3_BASE + "/" + DATASET_ID + "/objects/" + encodeURIComponent(annexKey);
                   var stream = await fetchUrl(url);
                   archive.append(stream, { name: rel });
-                  await new Promise(function (r) {
-                    archive.once("entry", r);
-                  });
-                  annexed++;
-                } catch (fetchErr) {
-                  skipped++;
-                  if (skipped <= 5) {
-                    console.warn("  Skipping " + rel + ": " + fetchErr.message);
-                  } else if (skipped === 6) {
-                    console.warn("  (suppressing further skip warnings)");
-                  }
+                } else {
+                  archive.append(fs.createReadStream(full), { name: rel });
                 }
-              } else {
-                archive.append(fs.createReadStream(full), { name: rel });
-                await new Promise(function (r) {
-                  archive.once("entry", r);
+                await new Promise(function (resolve, reject) {
+                  archive.once("entry", resolve);
+                  archive.once("error", reject);
                 });
-                regular++;
+                if (annexKey) annexed++;
+                else regular++;
+              } catch (err) {
+                skipped++;
+                if (skipped <= 10) {
+                  console.warn("  Skipping " + rel + ": " + err.message);
+                } else if (skipped === 11) {
+                  console.warn("  (suppressing further skip warnings)");
+                }
               }
 
               if ((annexed + regular + skipped) % 100 === 0) {
@@ -203,8 +204,10 @@ jobs:
               }
             }
 
+            console.log("Finalizing archive...");
             await archive.finalize();
-            await upload.done();
+            console.log("Waiting for S3 upload to complete...");
+            await uploadDone;
 
             console.log("Archive complete: " + annexed + " annexed + " + regular + " regular + " + skipped + " skipped");
             console.log("Uploaded to s3://" + BUCKET + "/" + s3Key);
