@@ -146,8 +146,21 @@ jobs:
               partSize: 10 * 1024 * 1024,
             });
 
+            upload.on("httpUploadProgress", function (p) {
+              if (p.loaded && p.loaded % (50 * 1024 * 1024) < (10 * 1024 * 1024)) {
+                console.log("  S3 upload: " + Math.round(p.loaded / 1024 / 1024) + " MB");
+              }
+            });
+
             var files = walkDir(".");
             console.log("Found " + files.length + " files");
+
+            // Debug: show first 3 files
+            for (var d = 0; d < Math.min(3, files.length); d++) {
+              var dk = resolveAnnexKey(files[d].full);
+              console.log("  [" + d + "] " + files[d].rel + " -> key=" + dk);
+              if (dk) console.log("       URL: " + S3_BASE + "/" + DATASET_ID + "/objects/" + encodeURIComponent(dk));
+            }
 
             var annexed = 0;
             var regular = 0;
@@ -157,6 +170,8 @@ jobs:
               var rel = files[i].rel;
               var full = files[i].full;
               var annexKey = resolveAnnexKey(full);
+
+              if (i === 0) console.log("Processing first file: " + rel + " annexed=" + !!annexKey);
 
               if (annexKey) {
                 var url = S3_BASE + "/" + DATASET_ID + "/objects/" + encodeURIComponent(annexKey);
