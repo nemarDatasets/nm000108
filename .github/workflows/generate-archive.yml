@@ -146,30 +146,17 @@ jobs:
               partSize: 10 * 1024 * 1024,
             });
 
-            upload.on("httpUploadProgress", function (p) {
-              if (p.loaded && p.loaded % (50 * 1024 * 1024) < (10 * 1024 * 1024)) {
-                console.log("  S3 upload: " + Math.round(p.loaded / 1024 / 1024) + " MB");
-              }
+            var uploadDone = upload.done().catch(function (err) {
+              console.error("S3 Upload error:", err.message);
+              process.exitCode = 1;
             });
 
             var files = walkDir(".");
             console.log("Found " + files.length + " files");
 
-            // Debug: show first 3 files
-            for (var d = 0; d < Math.min(3, files.length); d++) {
-              var dk = resolveAnnexKey(files[d].full);
-              console.log("  [" + d + "] " + files[d].rel + " -> key=" + dk);
-              if (dk) console.log("       URL: " + S3_BASE + "/" + DATASET_ID + "/objects/" + encodeURIComponent(dk));
-            }
-
             var annexed = 0;
             var regular = 0;
             var skipped = 0;
-
-            var uploadDone = upload.done().catch(function (err) {
-              console.error("S3 Upload error:", err.message);
-              process.exitCode = 1;
-            });
 
             for (var i = 0; i < files.length; i++) {
               var rel = files[i].rel;
@@ -204,9 +191,7 @@ jobs:
               }
             }
 
-            console.log("Finalizing archive...");
             await archive.finalize();
-            console.log("Waiting for S3 upload to complete...");
             await uploadDone;
 
             console.log("Archive complete: " + annexed + " annexed + " + regular + " regular + " + skipped + " skipped");
