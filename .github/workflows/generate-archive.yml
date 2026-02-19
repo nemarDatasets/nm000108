@@ -61,13 +61,13 @@ jobs:
               var stat = fs.lstatSync(filePath);
               if (stat.isSymbolicLink()) {
                 var target = fs.readlinkSync(filePath);
-                var m = target.match(/([^\\/]+)\\/\\1$/);
+                var m = target.match(/([^\/]+)\/\1$/);
                 if (m) return m[1];
-                var m2 = target.match(/\\/annex\\/objects\\/(.+)$/);
+                var m2 = target.match(/\/annex\/objects\/(.+)$/);
                 if (m2) return m2[1];
               } else if (stat.isFile() && stat.size < 500 && stat.size > 20) {
                 var content = fs.readFileSync(filePath, "utf8").trim();
-                var m3 = content.match(/^\\/annex\\/objects\\/(.+)$/);
+                var m3 = content.match(/^\/annex\/objects\/(.+)$/);
                 if (m3) return m3[1];
               }
             } catch (e) {}
