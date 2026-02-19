@@ -35,5 +35,5 @@
       "Description": "MATLAB-based EMG to BIDS converter using EEGLAB and bids-matlab-tools"
     }
   ],
-  "Version": "1.0.0"
+  "Version": "1.0.1"
 }
